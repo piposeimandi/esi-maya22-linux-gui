@@ -28,7 +28,7 @@ It is recommended to use the modified executable included in this repository to 
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/tu_usuario/tu_repositorio.git
+    git clone  https://github.com/piposeimandi/esi-maya22-linux-gui
     ```
 
 2. Navigate to the project directory:
