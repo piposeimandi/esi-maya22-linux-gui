@@ -1,0 +1,23 @@
+{
+    "es": {
+      "select_input_channel": "Seleccionar canal de entrada",
+      "input_volume": "Volumen de Entrada",
+      "left": "Izquierda",
+      "right": "Derecha",
+      "output_volume": "Volumen de Salida",
+      "sync_volumes": "Sincronizar volúmenes de salida",
+      "activate_monitoring": "Activar monitoreo",
+      "enable_headphones": "Habilitar audífonos"
+    },
+    "en": {
+      "select_input_channel": "Select input channel",
+      "input_volume": "Input Volume",
+      "left": "Left",
+      "right": "Right",
+      "output_volume": "Output Volume",
+      "sync_volumes": "Sync output volumes",
+      "activate_monitoring": "Activate monitoring",
+      "enable_headphones": "Enable headphones"
+    }
+  }
+  
