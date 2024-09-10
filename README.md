@@ -2,6 +2,8 @@
 
 This project provides a graphical interface to control the ESI Maya22 hardware via terminal commands. The interface allows you to adjust input and output volumes, enable/disable monitoring and headphones, and synchronize output volumes. Configuration is automatically saved to a JSON file.
 
+![1725988915439](images/README/1725988915439.png)
+
 ## Executable Information
 
 The `maya22-control` executable used in this project comes from the [rabits/esi-maya22-linux](https://github.com/rabits/esi-maya22-linux) repository. However, I have optionally included a modified `maya22-control` file that adds an additional option to disable headphones, which the original version does not support.
@@ -27,31 +29,32 @@ It is recommended to use the modified executable included in this repository to 
 ## Installation
 
 1. Clone this repository:
-    ```bash
-    git clone  https://github.com/piposeimandi/esi-maya22-linux-gui
-    ```
 
+   ```bash
+   git clone  https://github.com/piposeimandi/esi-maya22-linux-gui
+   ```
 2. Navigate to the project directory:
-    ```bash
-    cd tu_repositorio
-    ```
 
+   ```bash
+   cd tu_repositorio
+   ```
 3. Ensure the `maya22-control` executable is accessible:
-    - Use the modified executable included in this repository.
-    - If you choose to use the original executable, download it from the [rabits/esi-maya22-linux](https://github.com/rabits/esi-maya22-linux) repository.
-    - Place the executable in the same directory as the Python script.
-    - Ensure it is executable:
-      ```bash
-      chmod +x maya22-control
-      ```
+
+   - Use the modified executable included in this repository.
+   - If you choose to use the original executable, download it from the [rabits/esi-maya22-linux](https://github.com/rabits/esi-maya22-linux) repository.
+   - Place the executable in the same directory as the Python script.
+   - Ensure it is executable:
+     ```bash
+     chmod +x maya22-control
+     ```
 
 ## Usage
 
 1. Run the Python script:
-    ```bash
-    python controlador_esi_maya22.py
-    ```
 
+   ```bash
+   python controlador_esi_maya22.py
+   ```
 2. The graphical interface will open, and you will be able to adjust volumes, enable/disable monitoring and headphones, and select the input channel.
 
 ## Configuration
@@ -86,9 +89,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any questions or comments, please contact [bajosega@gmail.com](mailto:bajosega@gmail.com).
 
-
-
-# Controlador ESI Maya22 
+# Controlador ESI Maya22
 
 Este proyecto proporciona una interfaz gráfica para controlar el hardware ESI Maya22 a través de comandos en la terminal. La interfaz permite ajustar volúmenes de entrada y salida, activar/desactivar el monitoreo y audífonos, y sincronizar volúmenes de salida. La configuración se guarda automáticamente en un archivo JSON.
 
@@ -117,31 +118,32 @@ Se recomienda utilizar el ejecutable modificado incluido en este repositorio par
 ## Instalación
 
 1. Clona este repositorio:
-    ```bash
-    git clone https://github.com/piposeimandi/esi-maya22-linux-gui
-    ```
 
+   ```bash
+   git clone https://github.com/piposeimandi/esi-maya22-linux-gui
+   ```
 2. Navega al directorio del proyecto:
-    ```bash
-    cd tu_repositorio
-    ```
 
+   ```bash
+   cd tu_repositorio
+   ```
 3. Asegúrate de que el ejecutable `maya22-control` sea accesible:
-    - Usa el ejecutable modificado incluido en este repositorio.
-    - Si decides usar el ejecutable original, descárgalo desde el repositorio [rabits/esi-maya22-linux](https://github.com/rabits/esi-maya22-linux).
-    - Coloca el ejecutable en el mismo directorio que el script Python.
-    - Asegúrate de que sea ejecutable:
-      ```bash
-      chmod +x maya22-control
-      ```
+
+   - Usa el ejecutable modificado incluido en este repositorio.
+   - Si decides usar el ejecutable original, descárgalo desde el repositorio [rabits/esi-maya22-linux](https://github.com/rabits/esi-maya22-linux).
+   - Coloca el ejecutable en el mismo directorio que el script Python.
+   - Asegúrate de que sea ejecutable:
+     ```bash
+     chmod +x maya22-control
+     ```
 
 ## Uso
 
 1. Ejecuta el script Python:
-    ```bash
-    python controlador_esi_maya22.py
-    ```
 
+   ```bash
+   python controlador_esi_maya22.py
+   ```
 2. La interfaz gráfica se abrirá y podrás ajustar los volúmenes, activar/desactivar el monitoreo y los audífonos, y seleccionar el canal de entrada.
 
 ## Configuración
