@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_installdeb:
+	dh_installdeb
+
+override_dh_install:
+	install -D -m 755 maya22-gui.py $(CURDIR)/debian/maya22-gui/usr/share/maya22-gui/maya22-gui.py
+	install -D -m 755 maya22-control $(CURDIR)/debian/maya22-gui/usr/share/maya22-gui/maya22-control
+	install -D -m 644 images/maya22-icon.svg $(CURDIR)/debian/maya22-gui/usr/share/icons/hicolor/scalable/apps/maya22-gui.svg
+	install -D -m 644 images/maya22-icon.png $(CURDIR)/debian/maya22-gui/usr/share/icons/hicolor/256x256/apps/maya22-gui.png
+	install -D -m 644 images/maya22-icon-48.png $(CURDIR)/debian/maya22-gui/usr/share/icons/hicolor/48x48/apps/maya22-gui.png
+	install -D -m 644 images/maya22-icon-128.png $(CURDIR)/debian/maya22-gui/usr/share/icons/hicolor/128x128/apps/maya22-gui.png
+	install -D -m 644 debian/maya22-gui.desktop $(CURDIR)/debian/maya22-gui/usr/share/applications/maya22-gui.desktop
+
+override_dh_installchangelogs:
+	dh_installchangelogs

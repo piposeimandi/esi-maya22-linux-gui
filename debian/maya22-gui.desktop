@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=MAYA22USB Control
+Comment=Control panel for ESI Maya22 USB audio interface
+Exec=/usr/share/maya22-gui/maya22-gui.py
+Icon=maya22-gui
+Terminal=false
+Type=Application
+Categories=Audio;AudioVideo;Mixer;
+StartupNotify=true

@@ -1,0 +1,21 @@
+Source: maya22-gui
+Section: sound
+Priority: optional
+Maintainer: Adrian Seimandi <bajosega@gmail.com>
+Build-Depends: debhelper-compat (= 13), python3
+Standards-Version: 4.6.2
+Homepage: https://github.com/piposeimandi/esi-maya22-linux-gui
+Rules-Requires-Root: no
+
+Package: maya22-gui
+Architecture: all
+Depends: python3 (>= 3.8),
+         python3-pil,
+         python3-pil.imagetk,
+         python3-tk,
+         ${misc:Depends}
+Recommends: python3-customtkinter (>= 5.0)
+Description: GUI controller for ESI Maya22 USB audio interface
+ Graphical interface to control the ESI Maya22 USB audio interface
+ via the maya22-control binary. Adjust input/output volumes,
+ select input channels, and toggle monitoring/headphones.

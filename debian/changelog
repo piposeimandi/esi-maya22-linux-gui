@@ -1,0 +1,6 @@
+maya22-gui (1.0.0-1) unstable; urgency=medium
+
+  * Initial release with CustomTkinter GUI
+  * Full control of ESI Maya22 USB audio interface
+
+ -- Adrian Seimandi <bajosega@gmail.com>  Sun, 28 Jun 2026 00:00:00 -0300
