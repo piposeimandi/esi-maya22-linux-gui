@@ -22,13 +22,13 @@ mkdir -p "$DEB_DIR/usr/share/icons/hicolor/128x128/apps"
 mkdir -p "$DEB_DIR/usr/share/icons/hicolor/256x256/apps"
 
 echo "==> Copying files..."
-cp -p maya22-gui.py   "$DEB_DIR/usr/share/${PACKAGE}/"
-cp -p maya22-control  "$DEB_DIR/usr/share/${PACKAGE}/"
-cp -p images/maya22-icon.svg      "$DEB_DIR/usr/share/icons/hicolor/scalable/apps/maya22-gui.svg"
-cp -p images/maya22-icon.png      "$DEB_DIR/usr/share/icons/hicolor/256x256/apps/maya22-gui.png"
-cp -p images/maya22-icon-48.png   "$DEB_DIR/usr/share/icons/hicolor/48x48/apps/maya22-gui.png"
-cp -p images/maya22-icon-128.png  "$DEB_DIR/usr/share/icons/hicolor/128x128/apps/maya22-gui.png"
-cp -p debian/maya22-gui.desktop   "$DEB_DIR/usr/share/applications/"
+install -D -m 755 maya22-gui.py   "$DEB_DIR/usr/share/${PACKAGE}/maya22-gui.py"
+install -D -m 755 maya22-control  "$DEB_DIR/usr/share/${PACKAGE}/maya22-control"
+install -D -m 644 images/maya22-icon.svg      "$DEB_DIR/usr/share/icons/hicolor/scalable/apps/maya22-gui.svg"
+install -D -m 644 images/maya22-icon.png      "$DEB_DIR/usr/share/icons/hicolor/256x256/apps/maya22-gui.png"
+install -D -m 644 images/maya22-icon-48.png   "$DEB_DIR/usr/share/icons/hicolor/48x48/apps/maya22-gui.png"
+install -D -m 644 images/maya22-icon-128.png  "$DEB_DIR/usr/share/icons/hicolor/128x128/apps/maya22-gui.png"
+install -D -m 644 debian/maya22-gui.desktop   "$DEB_DIR/usr/share/applications/maya22-gui.desktop"
 
 echo "==> Creating control file..."
 cat > "$DEB_DIR/DEBIAN/control" <<EOF
@@ -39,7 +39,7 @@ Priority: optional
 Architecture: all
 Maintainer: Adrian Seimandi <bajosega@gmail.com>
 Depends: python3 (>= 3.8), python3-pil, python3-pil.imagetk, python3-tk
-Recommends: python3-customtkinter
+Recommends: gir1.2-ayatanaappindicator3-0.1
 Description: GUI controller for ESI Maya22 USB audio interface
  Graphical interface to control the ESI Maya22 USB audio interface
  via the maya22-control binary. Adjust input/output volumes,
@@ -52,7 +52,8 @@ dpkg-deb --root-owner-group --build "$DEB_DIR" > /dev/null
 echo ""
 echo "✅ Package created: ${BUILD_DIR}/${PACKAGE}_${VERSION}.deb"
 echo ""
-echo "Install with: sudo dpkg -i ${BUILD_DIR}/${PACKAGE}_${VERSION}.deb"
-echo "Then ensure customtkinter is installed:"
-echo "  sudo apt install python3-pip"
+echo "Install with:"
+echo "  sudo apt install ./${BUILD_DIR}/${PACKAGE}_${VERSION}.deb"
+echo ""
+echo "Then install customtkinter (not available in Debian repos):"
 echo "  pip install customtkinter"
