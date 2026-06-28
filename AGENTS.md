@@ -40,22 +40,30 @@ Interfaz gráfica para controlar la interfaz de audio ESI Maya22 USB en Linux me
 - Empaquetado .deb funcional con `build-deb.sh`
 
 ## Plan de Mejora
-1. Migrar de tkinter/ttk a **CustomTkinter** (apariencia moderna, soporte dark/light mode)
-2. Unificar en un solo archivo (`maya22-gui.py`)
-3. Arreglar layout (grid bien estructurado, sin overlaps)
-4. Agregar manejo de errores robusto
-5. Mejorar UX (tooltips, feedback visual)
-6. Soporte para tema oscuro/claro
-7. Eliminar `control.py` (obsoleto)
+1. ✅ Migrar de tkinter/ttk a **CustomTkinter**
+2. ✅ Arreglar layout (grid bien estructurado, sin overlaps)
+3. ✅ Agregar manejo de errores robusto
+4. ✅ Soporte para tema oscuro/claro
+5. ✅ Empaquetado .deb funcional
+6. **PENDIENTE:** System tray icon en KDE Wayland (AyatanaAppIndicator3 no muestra el icono — revisar integración con event loop de tkinter)
 
 ## Dependencias
 ```
 pip install customtkinter
 ```
 
+## Entorno Probado
+- Distribución: Debian 12+ / Ubuntu 22.04+
+- Escritorio: KDE Plasma (X11 y Wayland)
+- Sistema de bandeja: StatusNotifierItem via AyatanaAppIndicator3
+- En GNOME se necesita la extensión AppIndicator o `gnome-shell-extension-appindicator`
+
 ## Comandos Útiles
 ```bash
-python maya22-gui.py              # Ejecutar GUI
-./maya22-control -d               # Ver estado del dispositivo
-./maya22-control -c line -l 100   # Ejemplo de comando directo
+./build-deb.sh                                     # Generar .deb
+sudo apt install ./build/maya22-gui_1.0.0-1.deb   # Instalar .deb
+pip install customtkinter                          # Instalar CustomTkinter
+./maya22-gui.py                                    # Ejecutar GUI directo
+./maya22-control -d                                # Ver estado del dispositivo
+./maya22-control -c line -l 100                    # Ejemplo de comando directo
 ```

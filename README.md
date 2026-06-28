@@ -23,68 +23,59 @@ It is recommended to use the modified executable included in this repository to 
 ## Requirements
 
 - Python 3.x
-- Tkinter (generally included with Python)
-- `maya22-control` executable in the same directory as this script
+- CustomTkinter (`pip install customtkinter`)
+- Pillow (`pip install Pillow`)
+- `maya22-control` executable (included)
 
-### For Debian/Ubuntu Systems
+### System Dependencies (Debian/Ubuntu)
 
-To install the required dependencies using `apt-get`, follow these steps:
+```bash
+sudo apt install python3 python3-tk python3-pil python3-pil.imagetk python3-gi
+```
 
-1. Update your package list:
+### System Dependencies (Arch Linux)
 
-   `sudo apt-get update`
-
-2. Install the necessary packages:
-
-   `sudo apt-get install python3 python3-tk `
-
-This will install Python 3, the Tkinter GUI toolkit, and HID support.
-
-### For Arch Linux Systems
-
-To install the required dependencies using `pacman`, follow these steps:
-
-1. Update your system:
-
-   `sudo pacman -Syu`
-
-2. Install the necessary packages:
-
-   `sudo pacman -S python python-tk `
-
-These commands will install Python, Tkinter, and HID support on Arch Linux.
+```bash
+sudo pacman -S python python-tk python-pillow python-gobject
+```
 
 
-## Installation
+## Installation via .deb Package
 
-1. Clone this repository:
+1. Build the package:
 
    ```bash
-   git clone  https://github.com/piposeimandi/esi-maya22-linux-gui
+   ./build-deb.sh
    ```
-2. Navigate to the project directory:
+
+2. Install with apt (resolves dependencies automatically):
 
    ```bash
-   cd tu_repositorio
+   sudo apt install ./build/maya22-gui_1.0.0-1.deb
    ```
-3. Ensure the `maya22-control` executable is accessible:
 
-   - Use the modified executable included in this repository.
-   - If you choose to use the original executable, download it from the [rabits/esi-maya22-linux](https://github.com/rabits/esi-maya22-linux) repository.
-   - Place the executable in the same directory as the Python script.
-   - Ensure it is executable:
-     ```bash
-     chmod +x maya22-control
-     ```
-
-## Usage
-
-1. Run the Python script:
+3. Install customtkinter (not available in Debian repos):
 
    ```bash
-   python maya22-gui.py
+   pip install customtkinter
    ```
-2. The graphical interface will open, and you will be able to adjust volumes, enable/disable monitoring and headphones, and select the input channel.
+
+## Manual Usage
+
+1. Install dependencies:
+
+   ```bash
+   sudo apt install python3 python3-tk python3-pil python3-pil.imagetk python3-gi
+   pip install customtkinter Pillow
+   ```
+
+2. Run directly:
+
+   ```bash
+   ./maya22-gui.py
+   ```
+   
+   The graphical interface will open and you can adjust volumes, select input channels, and toggle monitoring/headphones.
 
 ## Configuration
 

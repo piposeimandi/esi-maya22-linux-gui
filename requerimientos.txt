@@ -2,10 +2,13 @@
 # =====================================
 
 # System packages (Debian/Ubuntu)
-sudo apt-get install python3 python3-tk python3-pil python3-pil.imagetk
+sudo apt-get install python3 python3-tk python3-pil python3-pil.imagetk python3-gi
 
 # Python packages (pip)
-pip install customtkinter Pillow
+pip install customtkinter Pillow pystray
+
+# Optional: system tray icon (AppIndicator)
+sudo apt-get install gir1.2-ayatanaappindicator3-0.1
 
 # For building .deb package:
 sudo apt-get install dpkg-dev
