@@ -45,8 +45,12 @@ class AudioControlApp(ctk.CTk):
         self.script_dir = script_dir
         icon_path = os.path.join(script_dir, 'images', 'maya22-icon.png')
         if os.path.exists(icon_path):
-            icon_img = Image.open(icon_path)
-            self.iconphoto(True, ctk.CTkImage(icon_img, size=(32, 32)))
+            try:
+                icon_img = Image.open(icon_path)
+                icon_img.thumbnail((32, 32))
+                self.iconphoto(True, ctk.CTkImage(icon_img, size=(32, 32)))
+            except Exception:
+                pass
 
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
 

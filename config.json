@@ -1,1 +1,12 @@
-{"input_channel": "mute", "input_left_volume": 127.0, "input_right_volume": 127.0, "output_left_volume": 145.0, "output_right_volume": 145.0, "sync_outputs": true, "mute_output": false, "monitor": true}
+{
+  "input_channel": "mic_hiz",
+  "input_left_volume": 127.0,
+  "input_right_volume": 127.0,
+  "output_left_volume": 145.0,
+  "output_right_volume": 145.0,
+  "input_sync": false,
+  "sync_outputs": true,
+  "mute_output": false,
+  "mute_input": false,
+  "monitor": true
+}
